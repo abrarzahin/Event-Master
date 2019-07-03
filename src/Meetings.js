@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MeetingsList from './MeetingsList';
 
 class Meetings extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class Meetings extends Component {
     this.setState({ meetingName: '' });
   }
 
-  render() {
+   render() {
     return (
       <div className="container mt-4">
         <div className="row justify-content-center">
@@ -73,6 +74,7 @@ class Meetings extends Component {
 
               {this.props.meetings && (
                 <div className="list-group list-group-flush">
+                  <MeetingsList meetings={this.props.meetings} />
                 </div>
               )}
             </div>
